@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from  app1.views import welcome,download
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', welcome),
+    path('download/<int:id>',download,)
 ]
